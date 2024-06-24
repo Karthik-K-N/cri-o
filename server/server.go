@@ -91,6 +91,10 @@ type Server struct {
 	containerEventClients           sync.Map
 	containerEventStreamBroadcaster sync.Once
 
+	dynamicRuntimeConfigClients     sync.Map
+	dynamicRuntimeConfigBroadcaster sync.Once
+	DynamicRuntimeConfigChan        chan types.DynamicRuntimeConfigResponse
+
 	// NRI runtime interface
 	nri *nriAPI
 }
@@ -455,6 +459,12 @@ func New(
 		// creating a container events channel only if the evented pleg is enabled
 		s.ContainerEventsChan = make(chan types.ContainerEventResponse, 1000)
 	}
+
+	s.DynamicRuntimeConfigChan = make(chan types.DynamicRuntimeConfigResponse, 1000)
+	go func() {
+		s.fetchMachineInfo()
+	}()
+
 	if err := configureMaxThreads(); err != nil {
 		return nil, err
 	}

@@ -2,6 +2,8 @@ go 1.22.0
 
 toolchain go1.22.2
 
+replace k8s.io/cri-api => github.com/Karthik-K-N/cri-api v0.0.0-20240623080352-8bf43b4dd8a2
+
 module github.com/cri-o/cri-o
 
 require (
@@ -24,6 +26,7 @@ require (
 	github.com/containers/conmon-rs v0.6.3
 	github.com/containers/image/v5 v5.31.0
 	github.com/containers/kubensmnt v1.2.0
+	github.com/containers/nri-plugins v0.5.1
 	github.com/containers/ocicrypt v1.1.10
 	github.com/containers/storage v1.54.0
 	github.com/coreos/go-systemd/v22 v22.5.1-0.20231103132048-7d375ecc2b09

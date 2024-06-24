@@ -332,6 +332,15 @@ github.com/containers/kubensmnt
 # github.com/containers/libtrust v0.0.0-20230121012942-c1716e8a8d01
 ## explicit
 github.com/containers/libtrust
+# github.com/containers/nri-plugins v0.5.1
+## explicit; go 1.22
+github.com/containers/nri-plugins/pkg/apis/config/v1alpha1/log
+github.com/containers/nri-plugins/pkg/apis/config/v1alpha1/log/klogcontrol
+github.com/containers/nri-plugins/pkg/log
+github.com/containers/nri-plugins/pkg/log/klogcontrol
+github.com/containers/nri-plugins/pkg/sysfs
+github.com/containers/nri-plugins/pkg/utils
+github.com/containers/nri-plugins/pkg/utils/cpuset
 # github.com/containers/ocicrypt v1.1.10
 ## explicit; go 1.20
 github.com/containers/ocicrypt
@@ -693,6 +702,7 @@ github.com/intel/goresctrl/pkg/kubernetes
 github.com/intel/goresctrl/pkg/log
 github.com/intel/goresctrl/pkg/path
 github.com/intel/goresctrl/pkg/rdt
+github.com/intel/goresctrl/pkg/sst
 github.com/intel/goresctrl/pkg/utils
 # github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99
 ## explicit
@@ -1542,7 +1552,7 @@ k8s.io/client-go/util/exec
 k8s.io/client-go/util/flowcontrol
 k8s.io/client-go/util/keyutil
 k8s.io/client-go/util/workqueue
-# k8s.io/cri-api v0.30.2
+# k8s.io/cri-api v0.30.2 => github.com/Karthik-K-N/cri-api v0.0.0-20240623080352-8bf43b4dd8a2
 ## explicit; go 1.22.0
 k8s.io/cri-api/pkg/apis/runtime/v1
 k8s.io/cri-api/pkg/errors
@@ -1622,3 +1632,4 @@ tags.cncf.io/container-device-interface/specs-go
 # zenhack.net/go/util v0.0.0-20230218002511-744d2d6d1739
 ## explicit; go 1.19
 zenhack.net/go/util
+# k8s.io/cri-api => github.com/Karthik-K-N/cri-api v0.0.0-20240623080352-8bf43b4dd8a2
